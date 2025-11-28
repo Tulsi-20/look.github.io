@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Wishlist — Signature Look</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6 font-sans">
+
+  <h1 class="text-3xl font-bold mb-6">Your Wishlist ❤️</h1>
+
+  <div id="wishlist-container" class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+    <!-- Items will be auto-loaded here -->
+  </div>
+
+  <script>
+  // Dummy product data (this must match your main page)
+  const products = [
+    {
+      id: "1",
+      name: "Signature Shirt 1",
+      price: 799,
+      img: "shirt1.jpg"
+    },
+    {
+      id: "2",
+      name: "Signature Shirt 2",
+      price: 899,
+      img: "shirt2.jpg"
+    },
+    {
+      id: "3",
+      name: "Signature Shirt 3",
+      price: 999,
+      img: "shirt3.jpg"
+    },
+    {
+      id: "4",
+      name: "Signature Shirt 4",
+      price: 1099,
+      img: "shirt4.jpg"
+    }
+  ];
+
+  // Load wishlist
+  let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+  function loadWishlistPage() {
+    const container = document.getElementById("wishlist-container");
+    container.innerHTML = "";
+
+    if (wishlist.length === 0) {
+      container.innerHTML = `
+        <p class="text-gray-600 text-lg">No items in wishlist.</p>
+      `;
+      return;
+    }
+
+    wishlist.forEach(id => {
+      const product = products.find(p => p.id === id);
+      if (!product) return;
+
+      container.innerHTML += `
+        <div class="bg-white shadow rounded-xl p-4">
+          <img src="${product.img}" class="w-full h-48 object-cover rounded-md" />
+          <h3 class="mt-3 font-semibold text-lg">${product.name}</h3>
+          <p class="text-gray-600 font-medium">₹${product.price}</p>
+          
+          <button 
+            onclick="removeFromWishlist('${product.id}')" 
+            class="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg w-full"
+          >
+            Remove
+          </button>
+        </div>
+      `;
+    });
+  }
+
+  function removeFromWishlist(id) {
+    wishlist = wishlist.filter(item => item !== id);
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+    loadWishlistPage();
+  }
+
+  loadWishlistPage();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Signature Look — Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind Play CDN for quick prototype -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+    .glass { background: rgba(255,255,255,0.6); backdrop-filter: blur(6px); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <!-- NAV -->
+  <header class="bg-white shadow-sm sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center gap-6">
+          <a class="flex items-center gap-2" href="#">
+            <div class="w-10 h-10 bg-gradient-to-br from-indigo-600 to-pink-500 rounded-md flex items-center justify-center text-white font-bold">S</div>
+            <div>
+              <div class="text-lg font-semibold">Signature Look</div>
+              <div class="text-xs text-gray-500 -mt-0.5">Men's Shirts</div>
+            </div>
+          </a>
+        </div>
+
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a class="hover:text-indigo-600" href="D:/clg/work/newcoll.html">New</a>
+          <a class="hover:text-indigo-600" href="D:/clg/work/best.html">Best Sellers</a>
+          <a class="hover:text-indigo-600" href="D:/clg/work/about.html">About</a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <div class="hidden sm:flex items-center gap-4">
+            <button class="p-2 rounded-full hover:bg-gray-100" title="Search">
+              <a href="D:/clg/work/ca.html"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.9 14.32a8 8 0 111.414-1.414l4.243 4.243-1.414 1.414-4.243-4.243zM8 14a6 6 0 100-12 6 6 0 000 12z" clip-rule="evenodd"/></svg>
+              </a>
+              </button>
+            <button class="p-2 rounded-full hover:bg-gray-100" title="Wishlist">
+              <a href="D:/clg/work/wisj.html"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 18.657 3.172 11.83a4 4 0 010-5.656z"/></svg>
+            </a>
+              </button>
+          </div>
+          <a class="hidden sm:inline-block px-4 py-2 bg-indigo-600 text-white rounded-md text-sm font-semibold" href="D:/clg/work/shop.html">Shop now</a>
+
+          <!-- mobile menu button -->
+          <button id="menuBtn" class="md:hidden p-2 rounded-md hover:bg-gray-100">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t">
+      <div class="px-4 py-3 flex flex-col gap-2">
+        <a href="D:/clg/work/newcoll.html" class="py-2">New</a>
+        <a href="D:/clg/work/best.html" class="py-2">Best Sellers</a>
+        <a href="D:/clg/work/about.html" class="py-2">About</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main class="mt-8">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div>
+          <p class="inline-block px-3 py-1 text-xs font-semibold uppercase bg-rose-50 text-rose-600 rounded-full">New arrival</p>
+          <h1 class="text-4xl sm:text-5xl font-extrabold mt-4">Signature shirts for every occasion</h1>
+          <p class="mt-4 text-gray-600 max-w-xl">Crafted from breathable cotton blends, tailored fits, and modern prints — make your everyday look unmistakable. Free shipping on orders over ₹1,999.</p>
+
+          <div class="mt-6 flex gap-3">
+            <a href="D:/clg/work/shop.html" class="px-6 py-3 bg-indigo-600 text-white rounded-md font-semibold shadow">Shop Men's Shirts</a>
+            <a href="D:/clg/work/best.html" class="px-6 py-3 border rounded-md font-semibold">Explore Collections</a>
+          </div>
+
+          <div class="mt-6 flex items-center gap-4 text-sm text-gray-600">
+            <div class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-600" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 10-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span>30-day returns</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-600" viewBox="0 0 20 20" fill="currentColor"><path d="M3 3h2l.4 2M7 13h10l1-7H6.4"/></svg>
+              <span>Free shipping over ₹1,999</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="shirt hero" class="w-full h-80 object-cover sm:h-96" />
+          </div>
+
+          <div class="absolute -bottom-6 left-6 bg-white p-4 rounded-lg shadow-md w-64 glass">
+            <div class="flex items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1520975913450-9d6a89d5b0d1?q=80&w=300&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="product" class="w-12 h-12 object-cover rounded-md" />
+              <div>
+                <div class="text-sm font-semibold">Linen Blend Shirt</div>
+                <div class="text-xs text-gray-500">From ₹1,499</div>
+              </div>
+              <div class="ml-auto">
+                <a href="D:/clg/work/buynow.html"><button class="px-3 py-1 bg-indigo-600 text-white rounded-md text-sm">Buy</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section id="collections" class="mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between">
+          <h2 class="text-2xl font-semibold">Shop by collection</h2>
+          <a href="#" class="text-sm font-medium text-indigo-600">See all</a>
+        </div>
+
+        <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <a class="group block rounded-xl overflow-hidden shadow bg-white p-4" href="#">
+            <img class="w-full h-36 object-cover rounded-md" src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Casual" />
+            <div class="mt-3 font-semibold">Casuals</div>
+            <div class="text-xs text-gray-500 mt-1">Breathable, everyday wear</div>
+          </a>
+
+          <a class="group block rounded-xl overflow-hidden shadow bg-white p-4" href="#">
+            <img class="w-full h-36 object-cover rounded-md" src="https://images.unsplash.com/photo-1523381294911-8d3cead13475?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Formal" />
+            <div class="mt-3 font-semibold">Formals</div>
+            <div class="text-xs text-gray-500 mt-1">Sharp fits for work</div>
+          </a>
+
+          <a class="group block rounded-xl overflow-hidden shadow bg-white p-4" href="#">
+            <img class="w-full h-36 object-cover rounded-md" src="https://images.unsplash.com/photo-1555529771-50aabffdcd5d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Printed" />
+            <div class="mt-3 font-semibold">Printed</div>
+            <div class="text-xs text-gray-500 mt-1">Bold & modern patterns</div>
+          </a>
+
+          <a class="group block rounded-xl overflow-hidden shadow bg-white p-4" href="#">
+            <img class="w-full h-36 object-cover rounded-md" src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Premium" />
+            <div class="mt-3 font-semibold">Premium</div>
+            <div class="text-xs text-gray-500 mt-1">Hand-finished details</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="best" class="mt-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between">
+          <h2 class="text-2xl font-semibold">Best sellers</h2>
+          <div class="text-sm text-gray-500">Trending now</div>
+        </div>
+
+        <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- product card (repeat) -->
+          <article class="bg-white rounded-xl shadow-sm overflow-hidden">
+            <div class="relative">
+              <img class="w-full h-56 object-cover" src="https://images.unsplash.com/photo-1520975913450-9d6a89d5b0d1?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Product 1">
+              <button class="absolute top-3 right-3 bg-white p-2 rounded-full shadow-sm">❤</button>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold">Classic Oxford</h3>
+              <p class="text-sm text-gray-500 mt-1">Slim fit — cotton oxford</p>
+              <div class="mt-3 flex items-center justify-between">
+                <div class="font-bold">₹1,299</div>
+                <button class="px-3 py-1 bg-indigo-600 text-white rounded-md text-sm">Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="bg-white rounded-xl shadow-sm overflow-hidden">
+            <div class="relative">
+              <img class="w-full h-56 object-cover" src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Product 2">
+              <button class="absolute top-3 right-3 bg-white p-2 rounded-full shadow-sm">❤</button>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold">Checked Comfort</h3>
+              <p class="text-sm text-gray-500 mt-1">Soft woven checks</p>
+              <div class="mt-3 flex items-center justify-between">
+                <div class="font-bold">₹1,099</div>
+                <button class="px-3 py-1 bg-indigo-600 text-white rounded-md text-sm">Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="bg-white rounded-xl shadow-sm overflow-hidden">
+            <div class="relative">
+              <img class="w-full h-56 object-cover" src="https://images.unsplash.com/photo-1520975913450-9d6a89d5b0d1?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Product 3">
+              <button class="absolute top-3 right-3 bg-white p-2 rounded-full shadow-sm">❤</button>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold">Linen Ease</h3>
+              <p class="text-sm text-gray-500 mt-1">Breezy summer wear</p>
+              <div class="mt-3 flex items-center justify-between">
+                <div class="font-bold">₹1,499</div>
+                <button class="px-3 py-1 bg-indigo-600 text-white rounded-md text-sm">Add</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="bg-white rounded-xl shadow-sm overflow-hidden">
+            <div class="relative">
+              <img class="w-full h-56 object-cover" src="https://images.unsplash.com/photo-1555529771-50aabffdcd5d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Product 4">
+              <button class="absolute top-3 right-3 bg-white p-2 rounded-full shadow-sm">❤</button>
+            </div>
+            <div class="p-4">
+              <h3 class="font-semibold">Premium Tailored</h3>
+              <p class="text-sm text-gray-500 mt-1">Sharp lines, premium fabric</p>
+              <div class="mt-3 flex items-center justify-between">
+                <div class="font-bold">₹2,499</div>
+                <button class="px-3 py-1 bg-indigo-600 text-white rounded-md text-sm">Add</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="mt-8 text-center">
+          <a href="#shop" class="inline-block px-6 py-3 border rounded-md font-semibold">Browse the full collection</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT / TESTIMONIALS -->
+    <section id="about" class="mt-20 pb-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+          <div class="lg:col-span-2">
+            <h2 class="text-2xl font-semibold">Why people love Signature Look</h2>
+            <p class="mt-3 text-gray-600">We focus on fabric, fit and finish. Our shirts are designed for comfort in Indian climates with modern cuts that work from office to weekend.</p>
+
+            <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="p-4 bg-gray-50 rounded-lg">
+                <div class="font-semibold">Quality fabrics</div>
+                <div class="text-sm text-gray-500 mt-1">Sourced ethically, tested for comfort.</div>
+              </div>
+              <div class="p-4 bg-gray-50 rounded-lg">
+                <div class="font-semibold">Tailored fit</div>
+                <div class="text-sm text-gray-500 mt-1">Multiple fits available — slim, regular, relaxed.</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="bg-indigo-50 p-4 rounded-lg">
+              <div class="font-semibold">Customer reviews</div>
+              <div class="mt-3 text-sm text-gray-600">"Great fit and fabric — buys two more!" — Rohit</div>
+              <div class="mt-2 text-sm text-gray-600">"Fast delivery. Nice finish." — Sameer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-200 mt-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <div class="text-white font-bold text-lg">Signature Look</div>
+          <div class="text-sm text-gray-400 mt-2">Modern men's shirts — crafted for comfort.</div>
+        </div>
+        <div>
+          <div class="font-semibold">Company</div>
+          <ul class="mt-3 text-sm text-gray-400 space-y-2">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="font-semibold">Support</div>
+          <ul class="mt-3 text-sm text-gray-400 space-y-2">
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping & Returns</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 py-4 text-center text-sm text-gray-500">© 2025 Signature Look. All rights reserved.</div>
+    </footer>
+  </main>
+
+  <script>
+    // mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  </script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — Signature Look</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <style>
+    body{
+      margin:0;
+      font-family:Arial, sans-serif;
+      background:#fafafa;
+      color:#333;
+    }
+
+    header{
+      width:100%;
+      padding:12px 30px;
+      background:#fff;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1);
+      position:sticky;
+      top:0;
+      z-index:10;
+    }
+
+    .logo{
+      font-size:24px;
+      font-weight:bold;
+    }
+
+    .header-icons i{
+      font-size:22px;
+      margin-left:18px;
+      cursor:pointer;
+    }
+
+    .hero{
+      width:100%;
+      height:300px;
+      background:url('https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=1200&q=80') center/cover;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .hero h1{
+      font-size:40px;
+      background:rgba(0,0,0,0.6);
+      padding:10px 25px;
+      color:#fff;
+      border-radius:6px;
+    }
+
+    .about-container{
+      max-width:1100px;
+      margin:50px auto;
+      padding:0 20px;
+      line-height:1.7;
+      font-size:17px;
+    }
+
+    .about-title{
+      font-size:28px;
+      font-weight:bold;
+      margin-bottom:15px;
+    }
+
+    .mission-box{
+      background:#fff;
+      padding:20px;
+      border-radius:10px;
+      margin-top:25px;
+      box-shadow:0 3px 8px rgba(0,0,0,0.1);
+    }
+
+    .mission-title{
+      font-size:22px;
+      font-weight:bold;
+      margin-bottom:10px;
+    }
+
+    .team-section{
+      margin-top:50px;
+    }
+
+    .team-title{
+      font-size:26px;
+      font-weight:bold;
+      margin-bottom:20px;
+    }
+
+    .team-members{
+      display:grid;
+      grid-template-columns:repeat(auto-fill, minmax(230px, 1fr));
+      gap:30px;
+    }
+
+    .member{
+      background:#fff;
+      padding:20px;
+      border-radius:10px;
+      text-align:center;
+      box-shadow:0 3px 8px rgba(0,0,0,0.1);
+    }
+
+    .member img{
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      object-fit:cover;
+      margin-bottom:10px;
+    }
+
+    footer{
+      background:#000;
+      padding:20px;
+      color:#fff;
+      margin-top:40px;
+      text-align:center;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Signature Look</div>
+  <div class="header-icons">
+    <i class="fa fa-search"></i>
+    <i class="fa fa-heart"></i>
+    <i class="fa fa-shopping-cart"></i>
+  </div>
+</header>
+
+<div class="hero">
+  <h1>About Us</h1>
+</div>
+
+<div class="about-container">
+  <div class="about-title">Who We Are</div>
+  <p>
+    Signature Look is a premium men's fashion brand focused on delivering high–quality,
+    stylish, and comfortable shirts for every occasion. Our goal is to bring modern design,
+    perfect fit, and exceptional craftsmanship together to give you the best wearing experience.
+  </p>
+
+  <div class="mission-box">
+    <div class="mission-title">Our Mission</div>
+    <p>
+      To provide fashionable, comfortable, and premium–quality shirts that define your personality.
+      Every shirt is crafted with attention to detail, ensuring durability and a luxury feel.
+    </p>
+  </div>
+
+  <div class="team-section">
+    <div class="team-title">Our Team</div>
+
+    <div class="team-members">
+      <div class="member">
+        <img src="https://images.unsplash.com/photo-1604079628040-94301bb21b91?auto=format&fit=crop&w=400&q=80" />
+        <h3>Founder / CEO</h3>
+        <p>Leading the brand with passion and creativity.</p>
+      </div>
+
+      <div class="member">
+        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=400&q=80" />
+        <h3>Lead Designer</h3>
+        <p>Creates modern and premium shirt designs.</p>
+      </div>
+
+      <div class="member">
+        <img src="https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?auto=format&fit=crop&w=400&q=80" />
+        <h3>Production Head</h3>
+        <p>Ensures top–quality stitching & craftsmanship.</p>
+      </div>
+
+      <div class="member">
+        <img src="https://images.unsplash.com/photo-1532074205216-d0e1f4b87368?auto=format&fit=crop&w=400&q=80" />
+        <h3>Marketing Manager</h3>
+        <p>Spreads our brand vision across the world.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  © 2025 Signature Look — All Rights Reserved
+</footer>
+
+</body>
+</html>

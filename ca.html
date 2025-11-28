@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cart — Signature Look</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 p-6 font-sans">
+
+  <h2 class="text-2xl font-bold mb-6">Your Cart</h2>
+
+  <div class="bg-white rounded-xl shadow p-6 max-w-3xl">
+    <div id="cartItems"></div>
+
+    <div class="text-right mt-6">
+      <p class="text-lg font-semibold">Total: <span id="cartTotal">₹0</span></p>
+      <a href="buynow.html" class="inline-block mt-4 px-6 py-2 bg-indigo-600 text-white rounded-md">Buy Now</a>
+    </div>
+  </div>
+
+  <script>
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const products = {
+      1: { name: "Linen Shirt", price: 1499, img: "https://images.unsplash.com/photo-1520975913450-9d6a89d5b0d1?q=80" },
+      2: { name: "Casual Check Shirt", price: 1199, img: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80" }
+    };
+
+    function loadCart() {
+      const container = document.getElementById("cartItems");
+      container.innerHTML = "";
+
+      let total = 0;
+
+      cart.forEach(id => {
+        let item = products[id];
+        total += item.price;
+
+        container.innerHTML += `
+        <div class="flex items-center gap-4 border-b pb-4 mb-4">
+          <img src="${item.img}" class="w-24 h-24 rounded-md object-cover" />
+          <div class="flex-1">
+            <h3 class="font-semibold text-lg">${item.name}</h3>
+            <p class="text-gray-500 text-sm">₹${item.price}</p>
+          </div>
+          <button onclick="removeCart(${id})" class="text-red-500">Remove</button>
+        </div>`;
+      });
+
+      document.getElementById("cartTotal").innerText = "₹" + total;
+    }
+
+    function removeCart(id) {
+      cart = cart.filter(item => item !== id);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      loadCart();
+    }
+
+    loadCart();
+  </script>
+
+</body>
+</html>
